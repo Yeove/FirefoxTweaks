@@ -75,7 +75,7 @@ Install all of this before following the guide
 
 1. Right-click the Sidebery icon in your toolbar
 2. Select **"Move sidebar to right"**
-<br> Or in `about:config`, set `sidebar.position_start` to `false`
+<br> or in `about:config`, set `sidebar.position_start` to `false`
 <a href="README FILES/sidebery-right-side.gif" target="_blank">
   <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="600">
 </a>
