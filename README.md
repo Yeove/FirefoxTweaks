@@ -37,15 +37,15 @@ flowchart LR
 
 1. Open `about:support`
 2. Find the **Profile Folder** row → click **Open Folder**
-<br>This will open a folder on your desktop:
-<br><br>`Windows:`  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
-<br>`Linux:`    `~/.mozilla/firefox/<profile-id>`
-<br>`macOS:`    `~/Library/Application Support/Firefox/Profiles/<profile-id>` 
-<br><br>Drag the **chrome** folder from this repo into the **profile-id** Folder
-<br><a href="README FILES/firefox-chrome-folder.gif" target="_blank">
-  <img src="README FILES/firefox-chrome-folder.gif" alt="Firefox open profile folder" width="800">
-</a>
-3. Fully close Firefox by clicking the **☰** menu on the top right, then press **Exit**, or **Ctrl + Shift + Q**
+    <br>This will open a folder on your desktop:
+- `Windows:`  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
+- `Linux:`    `~/.mozilla/firefox/<profile-id>`
+- `macOS:`    `~/Library/Application Support/Firefox/Profiles/<profile-id>` 
+3. Drag the **chrome** folder from this repo into the **profile-id** Folder
+    <a href="README FILES/firefox-chrome-folder.gif" target="_blank">
+      <img src="README FILES/firefox-chrome-folder.gif" alt="Firefox open profile folder" width="800">
+    </a>
+4. Fully close Firefox by clicking the **☰** menu on the top right, then press **Exit**, or **Ctrl + Shift + Q**
 <br><a href="README FILES/firefox-close.gif" target="_blank">
   <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
