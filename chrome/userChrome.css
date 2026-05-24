@@ -1,0 +1,71 @@
+/* ============================================
+   Sidebery Expand-On-Hover - userChrome.css
+   ============================================ */
+
+/*Lovingly stolen from https://pastebin.com/6z7QU7ps*/
+/*And this reddit link https://www.reddit.com/r/FirefoxCSS/comments/1rno75d/sidebery_expandonhover/*/
+
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+#main-window {
+    --sidebar-collapsed-width: 40px;
+    --sidebar-expanded-width: 380px;
+}
+
+#sidebar-panel-header {
+    display: none !important;
+}
+
+#sidebar-main {
+    display: none !important;
+}
+
+#sidebar-splitter {
+    display: none !important;
+}
+
+#sidebar-launcher-splitter {
+    display: none !important;
+}
+
+#sidebar-box {
+    width: var(--sidebar-collapsed-width) !important;
+    min-width: unset !important;
+    max-width: var(--sidebar-expanded-width) !important;
+    height: 100% !important;
+    padding-bottom: 0 !important;
+    z-index: 4 !important;
+/*    transition: width 0.33s cubic-bezier(0.07, 0.95, 0, 1) !important; */ /*This is deactivated because I'm using the adaptive tab colour extension, so there's a better way to do this*/
+}
+
+#sidebar-box:hover {
+    --tabs-lvl-opacity: 0.09 !important;
+    --tabs-indent: 16px !important;
+    width: var(--sidebar-expanded-width) !important;
+}
+
+#sidebar-box:hover ~ #tabbrowser-tabbox {
+    margin-right: calc((var(--sidebar-expanded-width) - var(--sidebar-collapsed-width)) * -1) !important;
+}
+
+#tabbrowser-tabbox {
+    z-index: inherit !important;
+    transition: margin-right 0.33s cubic-bezier(0.07, 0.95, 0, 1) !important;
+}
+
+/* Adaptive Tab Bar Colour + Sidebery transition merge */
+#navigator-toolbox,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+#sidebar-box,
+.tab-background,
+.urlbar-background,
+findbar {
+    transition:
+        background-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),             /*Was 0.5s */
+        border-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),                 /*Was 0.5s */
+        width 0.33s cubic-bezier(0.07, 0.95, 0, 1) !important;
+}
