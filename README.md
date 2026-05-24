@@ -1,7 +1,7 @@
 # Yeove's Firefox Sidebery CSS Tweaks
 
 This is my custom CSS for Firefox.
-It's pretty similar to Firefox's native vertical tabs, but with auto hover / tab search / inline image previews / custom keybinds using the sidebery addon
+<br>It's pretty similar to Firefox's native vertical tabs, but with auto hover / tab search / inline image previews / custom keybinds using the sidebery addon
 
 ## Overview
 
@@ -14,11 +14,11 @@ flowchart LR
 ---
 
 ## Prerequisites
+Install all of this before following the guide
 
 1. [Firefox](https://www.firefox.com/en-CA/download/all/) any modern version
 2. [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery/) extension for vertical tabs
 3. [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) extension for dynamic sidebar colours
-> Install all of this before following the guide
 
 ---
 
