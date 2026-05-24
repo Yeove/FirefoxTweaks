@@ -41,7 +41,7 @@ flowchart LR
 - `Windows:`  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
 - `Linux:`    `~/.mozilla/firefox/<profile-id>`
 - `macOS:`    `~/Library/Application Support/Firefox/Profiles/<profile-id>` 
-3. Drag the **chrome** folder from this repo into the **profile-id** Folder
+3. Drag the **chrome** folder from this repo into the **profile-id** folder
     <a href="README FILES/firefox-chrome-folder.gif" target="_blank">
       <img src="README FILES/firefox-chrome-folder.gif" alt="Firefox open profile folder" width="800">
     </a>
@@ -50,6 +50,7 @@ flowchart LR
   <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
 5. Relaunch Firefox
+  
 > You should now have custom .css enabled
 
 ### Step 3: Import Sidebery settings
