@@ -30,7 +30,7 @@ flowchart LR
 2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets`
 3. Set it to `true`
 <br><a href="README FILES/firefox-enable-css.gif" target="_blank">
-  <img src="README FILES/firefox-enable-css.gif" alt="Firefox enable userChrome.css support" width="300">
+  <img src="README FILES/firefox-enable-css.gif" alt="Firefox enable userChrome.css support" width="800">
 </a>
 
 ### Step 2: Install userChrome.css
