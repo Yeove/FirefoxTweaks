@@ -49,7 +49,7 @@ flowchart LR
 <br><a href="README FILES/firefox-close.gif" target="_blank">
   <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
-4. Relaunch Firefox
+5. Relaunch Firefox
 > You should now have custom .css enabled
 
 ### Step 3: Import Sidebery settings
