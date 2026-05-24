@@ -30,7 +30,7 @@ Install all of this before following the guide
 2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets`
 3. Set it to `true`
 <br><a href="README FILES/firefox-enable-css.gif" target="_blank">
-  <img src="README FILES/firefox-enable-css.gif" alt="Firefox enable userChrome.css support" width="800">
+  <img src="README FILES/firefox-enable-css.gif" alt="Firefox enable userChrome.css support" width="600">
 </a>
 
 ### Step 2: Install userChrome.css
@@ -66,7 +66,7 @@ Install all of this before following the guide
 5. Select `Sidebery_Settings.json` from this repo
 6. On the new window that popped up; click **Import addon data**
 <br><a href="README FILES/sidebery-import-settings.gif" target="_blank">
-  <img src="README FILES/sidebery-import-settings.gif" alt="Sidebery import settings" width="800">
+  <img src="README FILES/sidebery-import-settings.gif" alt="Sidebery import settings" width="600">
 </a>
 
 > Importing will overwrite your existing Sidebery settings<br>If you've already set things up the way you like, export your current settings first via<br>Settings → Help → Export addon data
@@ -80,7 +80,7 @@ Install all of this before following the guide
 <br>
 <br>Or in `about:config`, set `sidebar.position_start` to `false`
 <br><a href="README FILES/sidebery-right-side.gif" target="_blank">
-  <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="800">
+  <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="600">
 </a>
 
 ### Additional Notes
