@@ -38,19 +38,16 @@ flowchart LR
 1. Open `about:support`
 2. Find the **Profile Folder** row → click **Open Folder**
 <br>This will open a folder on your desktop:
-<br>
-<br>**Windows:**  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
-<br>**Linux:**    `~/.mozilla/firefox/<profile-id>`
-<br>**macOS:**    `~/Library/Application Support/Firefox/Profiles/<profile-id>`
-<br>
-<br>Drag the `chrome` folder from this repo into the `profile-id` Folder
+<br><br>`Windows:`  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
+<br>`Linux:`    `~/.mozilla/firefox/<profile-id>`
+<br>`macOS:`    `~/Library/Application Support/Firefox/Profiles/<profile-id>` 
+<br><br>Drag the **chrome** folder from this repo into the **profile-id** Folder
 <br><a href="README FILES/firefox-chrome-folder.gif" target="_blank">
-  <img src="README FILES/firefox-chrome-folder.gif" alt="Firefox open profile folder" width="300">
+  <img src="README FILES/firefox-chrome-folder.gif" alt="Firefox open profile folder" width="800">
 </a>
-
 3. Fully close Firefox by clicking the **☰** menu on the top right, then press **Exit**, or **Ctrl + Shift + Q**
 <br><a href="README FILES/firefox-close.gif" target="_blank">
-  <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="150">
+  <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
 4. Relaunch Firefox
 > You should now have custom .css enabled
@@ -64,7 +61,7 @@ flowchart LR
 5. Select `Sidebery_Settings.json` from this repo
 6. On the new window that popped up; click **Import addon data**
 <br><a href="README FILES/sidebery-import-settings.gif" target="_blank">
-  <img src="README FILES/sidebery-import-settings.gif" alt="Sidebery move sidebar to right" width="300">
+  <img src="README FILES/sidebery-import-settings.gif" alt="Sidebery import settings" width="800">
 </a>
 
 > Importing will overwrite your existing Sidebery settings<br>If you've already set things up the way you like, export your current settings first via<br>Settings → Help → Export addon data
@@ -78,7 +75,7 @@ flowchart LR
 <br>
 <br>Or in `about:config`, set `sidebar.position_start` to `false`
 <br><a href="README FILES/sidebery-right-side.gif" target="_blank">
-  <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="300">
+  <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="800">
 </a>
 
 ### Additional Notes
