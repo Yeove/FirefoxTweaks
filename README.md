@@ -37,7 +37,7 @@ Install all of this before following the guide
 
 1. Open `about:support`
 2. Find the **Profile Folder** row → click **Open Folder**
-    <br>This will open a folder on your desktop:
+    <br> This will open a folder on your desktop:
 - `Windows:`  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
 - `Linux:`    `~/.mozilla/firefox/<profile-id>`
 - `macOS:`    `~/Library/Application Support/Firefox/Profiles/<profile-id>` 
@@ -50,13 +50,11 @@ Install all of this before following the guide
   <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
 5. Relaunch Firefox
+<br> 
+<br>
 
-   &nbsp;
-  
-   > You should now have custom .css enabled
-
-   &nbsp;
-  
+> You should now have custom .css enabled
+ 
 ### Step 3: Import Sidebery settings
 
 1. Click the Sidebery icon (or press `F1`) to expand the sidebar
@@ -77,9 +75,8 @@ Install all of this before following the guide
 
 1. Right-click the Sidebery icon in your toolbar
 2. Select **"Move sidebar to right"**
-<br>
-<br>Or in `about:config`, set `sidebar.position_start` to `false`
-<br><a href="README FILES/sidebery-right-side.gif" target="_blank">
+<br> Or in `about:config`, set `sidebar.position_start` to `false`
+<a href="README FILES/sidebery-right-side.gif" target="_blank">
   <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="600">
 </a>
 
