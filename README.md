@@ -50,9 +50,13 @@ Install all of this before following the guide
   <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
 5. Relaunch Firefox
-  
-> You should now have custom .css enabled
 
+   &nbsp;
+  
+   > You should now have custom .css enabled
+
+   &nbsp;
+  
 ### Step 3: Import Sidebery settings
 
 1. Click the Sidebery icon (or press `F1`) to expand the sidebar
