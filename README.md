@@ -9,6 +9,7 @@ This is my custom CSS for Firefox.
 flowchart LR
     A["userChrome.css<br/>(this repo)"] --> B["profile-id/chrome<br>folder found via<br>about:support → Open Folder"]
     C["Sidebery_Settings.json<br/>(this repo)"] --> D["Sidebery Settings →<br/>Help → Import addon data"]
+    E["Scroll_Anywhere_Settings.scroll_anywhere<br/>(this repo)"] --> F["ScrollAnywhere →<br/>Backup → Import settings from ".scroll_anywhere file""]
 ```
 
 ---
@@ -19,6 +20,7 @@ Install all of this before following the guide
 1. [Firefox](https://www.firefox.com/en-CA/download/all/) any modern version
 2. [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery/) extension for vertical tabs
 3. [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) extension for dynamic sidebar colours
+3. [ScrollAnywhere](https://addons.mozilla.org/firefox/addon/scroll_anywhere/) extension for grab and drag scrolling using middle mouse button
 
 ---
 
@@ -67,9 +69,18 @@ Install all of this before following the guide
 
 > Importing will overwrite your existing Sidebery settings<br>If you've already set things up the way you like, export your current settings first via<br>Settings → Help → Export addon data
 
+### Step 4: Import Scroll Anywhere settings
+
+1. Click the Scroll Anywhere icon
+2. Click **Options**
+3. In the left menu, click **Backup**
+4. Click **Import settings from ".scroll_anywhere file"**
+5. Select `Scroll_Anywhere_Settings.scroll_anywhere` from this repo
+6. On the bottom of the page, click **Save changes and close**
+
 ## Optional Tweaks
 
-###  Step 4: Move Sidebery to the right side of the window
+###  Step 5: Move Sidebery to the right side of the window
 
 1. Right-click the Sidebery icon in your toolbar
 2. Select **"Move sidebar to right"**
@@ -78,6 +89,22 @@ Install all of this before following the guide
 <br><a href="README FILES/sidebery-right-side.gif" target="_blank">
   <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="800">
 </a>
+
+## Step 6: Enable Live Editing for CSS
+
+Want to mess with CSS and see changes instantly without restarting Firefox?
+<br>Use the **Browser Toolbox**:
+
+1. Open Firefox and press **F12** on any page to open regular DevTools
+2. Click the ⚙️ gear icon
+3. Enable **"Enable browser chrome and add-on debugging toolboxes"**
+4. Enable **"Enable remote debugging"**
+5. Press **Ctrl + Shift + Alt + I** to open the Browser Toolbox
+6. Go to the **Style Editor** tab
+7. Find `userChrome.css` in the stylesheet list
+8. Now you can edit changes live in the browser, and see them happen in real time
+
+> Edits in the Browser Toolbox are temporary and disappear when you close it<br>Treat it like a scratchpad; find what works, then paste it into your real `userChrome.css`<br>If you totally screw up the browser, just close the Browser Toolbox and reopen it to start fresh
 
 ### Additional Notes
 
