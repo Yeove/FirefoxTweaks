@@ -69,3 +69,9 @@ findbar {
         border-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),                 /*Was 0.5s */
         width 0.33s cubic-bezier(0.07, 0.95, 0, 1) !important;
 }
+
+
+/* Scrollbar position jitters on sidebery expansion animation, this is an attempt to fix it */
+#sidebar-box {
+    scrollbar-gutter: stable;
+}

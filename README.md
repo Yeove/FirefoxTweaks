@@ -1,4 +1,4 @@
-# Yeove's Firefox Sidebery CSS Tweaks
+# Yeove's Firefox CSS Tweaks
 
 This is my custom CSS for Firefox.
 <br>It's pretty similar to Firefox's native vertical tabs, but with auto hover / tab search / inline image previews / custom keybinds using the sidebery addon
