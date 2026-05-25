@@ -32,14 +32,14 @@ Install all of this before following the guide
 2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets`
 3. Set it to `true`
 <br><a href="README FILES/firefox-enable-css.gif" target="_blank">
-  <img src="README FILES/firefox-enable-css.gif" alt="Firefox enable userChrome.css support" width="800">
+  <img src="README FILES/firefox-enable-css.gif" alt="Firefox enable userChrome.css support" width="600">
 </a>
 
 ### Step 2: Install userChrome.css
 
 1. Open `about:support`
 2. Find the **Profile Folder** row → click **Open Folder**
-    <br>This will open a folder on your desktop:
+    <br> This will open a folder on your desktop:
 - `Windows:`  `C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile-id>`
 - `Linux:`    `~/.mozilla/firefox/<profile-id>`
 - `macOS:`    `~/Library/Application Support/Firefox/Profiles/<profile-id>` 
@@ -52,9 +52,11 @@ Install all of this before following the guide
   <img src="README FILES/firefox-close.gif" alt="Closing Firefox via menu" width="200">
 </a>
 5. Relaunch Firefox
-  
-> You should now have custom .css enabled
+<br> 
+<br>
 
+> You should now have custom .css enabled
+ 
 ### Step 3: Import Sidebery settings
 
 1. Click the Sidebery icon (or press `F1`) to expand the sidebar
@@ -64,7 +66,7 @@ Install all of this before following the guide
 5. Select `Sidebery_Settings.json` from this repo
 6. On the new window that popped up; click **Import addon data**
 <br><a href="README FILES/sidebery-import-settings.gif" target="_blank">
-  <img src="README FILES/sidebery-import-settings.gif" alt="Sidebery import settings" width="800">
+  <img src="README FILES/sidebery-import-settings.gif" alt="Sidebery import settings" width="600">
 </a>
 
 > Importing will overwrite your existing Sidebery settings<br>If you've already set things up the way you like, export your current settings first via<br>Settings → Help → Export addon data
@@ -84,10 +86,9 @@ Install all of this before following the guide
 
 1. Right-click the Sidebery icon in your toolbar
 2. Select **"Move sidebar to right"**
-<br>
-<br>Or in `about:config`, set `sidebar.position_start` to `false`
-<br><a href="README FILES/sidebery-right-side.gif" target="_blank">
-  <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="800">
+<br> or in `about:config`, set `sidebar.position_start` to `false`
+<a href="README FILES/sidebery-right-side.gif" target="_blank">
+  <img src="README FILES/sidebery-right-side.gif" alt="Sidebery move sidebar to right" width="600">
 </a>
 
 ## Step 6: Enable Live Editing for CSS
