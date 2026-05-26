@@ -7,9 +7,21 @@ This is my custom CSS for Firefox.
 
 ```mermaid
 flowchart LR
-    A["userChrome.css<br/>(this repo)"] --> B["profile-id/chrome<br>folder found via<br>about:support → Open Folder"]
-    C["Sidebery_Settings.json<br/>(this repo)"] --> D["Sidebery Settings →<br/>Help → Import addon data"]
-    E["Scroll_Anywhere_Settings.scroll_anywhere<br/>(this repo)"] --> F["ScrollAnywhere →<br/>Backup → Import settings from ".scroll_anywhere file""]
+    subgraph repo["This Repo"]
+        A["userChrome.css"]
+        E["Sidebery_Settings.json"]
+        C["Scroll_Anywhere_Settings.scroll_anywhere"]
+    end
+    subgraph ProfileIDFolder["Your Computer's File Explorer"]
+        B["profile-id/chrome<br>folder found via<br>about:support → Open Folder"]
+    end
+    subgraph FirefoxBrowser["Firefox Addons Page"]
+        D["Sidebery Settings →<br/>Help → Import addon data"]
+        F["ScrollAnywhere Settings →<br/>Backup → Import settings from '.scroll_anywhere file'"]
+    end
+    A --> B
+    E --> D
+    C --> F
 ```
 
 ---
