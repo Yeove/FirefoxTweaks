@@ -109,7 +109,7 @@ Want to mess with CSS and see changes instantly without restarting Firefox?
 <br>Use the **Browser Toolbox**:
 
 1. Open Firefox and press **F12** on any page to open regular DevTools
-2. Click the ⚙️ gear icon
+2. Click the ⚙️ gear icon, or press F1 to open settings
 3. Enable **"Enable browser chrome and add-on debugging toolboxes"**
 4. Enable **"Enable remote debugging"**
 5. Press **Ctrl + Shift + Alt + I** to open the Browser Toolbox
@@ -121,7 +121,13 @@ Want to mess with CSS and see changes instantly without restarting Firefox?
 
 ### Additional Notes
 
-**Credits - stuff I lovingly stole from people:**
+**Optional Firefox Extensions I Like**
+- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) Prevents Ads on Websites
+- [YouTube Nonstop](https://addons.mozilla.org/en-US/firefox/addon/youtube-nonstop/) Prevents YouTube from pausing automatically in the background, good for music playlists
+- [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/) Automatically puts unused tabs to sleep, reducing the amount of RAM Firefox uses
+- [Keepa - Amazon Price Tracker](https://addons.mozilla.org/en-US/firefox/addon/keepa/) Lets you see a historical price chart of past prices on Amazon Items
+
+**Credits - Stuff I Lovingly Stole From People:**
 - Base config by [CLHowell on Pastebin](https://pastebin.com/6z7QU7ps)
 - Reddit [r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS/comments/1rno75d/sidebery_expandonhover/)
 
