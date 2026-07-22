@@ -7,7 +7,7 @@ This is my custom CSS for Firefox.
 
 ```mermaid
 flowchart LR
-    subgraph repo["This Repo"]
+    subgraph ThisRepo["This Repo"]
         A["userChrome.css"]
         E["Sidebery_Settings.json"]
         C["Scroll_Anywhere_Settings.scroll_anywhere"]
