@@ -83,6 +83,12 @@ Install all of this before following the guide
 
 > Importing will overwrite your existing Sidebery settings<br>If you've already set things up the way you like, export your current settings first via<br>Settings → Help → Export addon data
 
+If tab previews aren't working in the sidebar, toggle the `Preview mode: popup in sidebar` setting off and on again, then click `Allow` when Firefox asks to grant Sidebery the required permission.
+
+<a href="README FILES/sidebery-tab-preview.png.png" target="_blank">
+  <img src="README FILES/sidebery-tab-preview.png.png" alt="Sidebery Tabs Preview" width="600">
+</a>
+
 ### Step 4: Import Scroll Anywhere settings
 
 1. Click the Scroll Anywhere icon
