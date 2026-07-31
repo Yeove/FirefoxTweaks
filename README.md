@@ -71,7 +71,7 @@ Install all of this before following the guide
  
 ### Step 3: Import Sidebery settings
 
-1. Click the Sidebery icon (or press `F1`) to expand the sidebar
+1. Press `F1` to expand the Sidebery sidebar
 2. Click the ⚙️ gear icon on the top right to open Sidebery Settings
 3. In the left menu, click **Help**
 4. Click **Import addon data**
