@@ -85,8 +85,8 @@ Install all of this before following the guide
 
 If tab previews aren't working in the sidebar, toggle the `Preview mode: popup in sidebar` setting off and on again, then click `Allow` when Firefox asks to grant Sidebery the required permission.
 
-<a href="README FILES/sidebery-tab-preview.png.png" target="_blank">
-  <img src="README FILES/sidebery-tab-preview.png.png" alt="Sidebery Tabs Preview" width="600">
+<a href="README FILES/sidebery-tab-preview.png" target="_blank">
+  <img src="README FILES/sidebery-tab-preview.png" alt="Sidebery Tabs Preview" width="600">
 </a>
 
 ### Step 4: Import Scroll Anywhere settings
