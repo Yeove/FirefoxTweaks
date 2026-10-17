@@ -1,0 +1,31 @@
+/* ============================================
+   Sidebery Drop-Down - Sidebery Styles
+   ============================================
+   The panel no longer animates its width, so the old collapsed-look
+   rules (icon-only tabs, hidden nav bar, width locks) are gone.
+   When closed, the panel is 0px tall, so nothing needs hiding. */
+
+div.bottom-bar-space {
+    transition: height 0.33s cubic-bezier(0.07, 0.95, 0, 1);
+}
+
+.Sidebar, .bottom-space {
+    transition: background-color 0.5s cubic-bezier(0, 0, 0, 1) !important;
+}
+
+/* Nav bar and pinned tabs wrap across the wide panel */
+#nav_bar {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+.PinnedTabsBar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+/* Hide the top and bottom shadows on the sidebery panel */
+.top-shadow,
+.bottom-shadow {
+    display: none !important;
+}

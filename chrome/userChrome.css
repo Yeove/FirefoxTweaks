@@ -1,15 +1,20 @@
 /* ============================================
-   Sidebery Expand-On-Hover - userChrome.css
+   Sidebery Drop-Down - userChrome.css
+   Touch the top edge of the window to drop the tab list down;
+   touch the strip at the bottom to close it. Ctrl+Space pins it.
+   Needs chrome\JS\sidebar_toggle.uc.js (creates the edge zones).
    ============================================ */
-/*Lovingly stolen from https://pastebin.com/6z7QU7ps*/
+/*Originally based on https://pastebin.com/6z7QU7ps*/
 /*And this reddit link https://www.reddit.com/r/FirefoxCSS/comments/1rno75d/sidebery_expandonhover/*/
 #TabsToolbar {
     visibility: collapse !important;
 }
 #main-window {
-    --sidebar-collapsed-width: 40px;
-    --sidebar-expanded-width: 380px;
-    --sidebar-collapse-delay: 0s; /* wait this long after mouse leaves before collapsing */
+    --sidebar-hotzone-height: 3px;      /* height of the invisible trigger strip at the top edge */
+    --sidebar-close-zone-height: 32px;  /* strip left uncovered at the bottom; hover it to close */
+    --sidebar-close-zone-color: rgba(0, 0, 0, 0.35);
+    --sidebar-dropdown-width: 100%;     /* full window width; try e.g. 500px for a narrower panel */
+    --sidebar-collapse-delay: 0s;       /* wait this long before sliding back up */
 }
 #sidebar-panel-header {
     display: none !important;
@@ -25,36 +30,71 @@ sidebar-main {
 #sidebar-launcher-splitter {
     display: none !important;
 }
+
+/* --- Top-edge trigger strip (created by sidebar_toggle.uc.js) --- */
+#sb-top-hotzone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--sidebar-hotzone-height);
+    z-index: 10000;
+    background: transparent;
+    -moz-window-dragging: no-drag;      /* drag areas don't report hover, so opt this strip out */
+}
+/* Don't trigger over fullscreen videos */
+#main-window[inDOMFullscreen] #sb-top-hotzone {
+    display: none;
+}
+
+/* --- Sidebar becomes a drop-down panel under the toolbar --- */
+#browser {
+    position: relative !important;
+}
 #sidebar-box {
-    width: var(--sidebar-collapsed-width) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: var(--sidebar-dropdown-width) !important;
     min-width: unset !important;
-    max-width: var(--sidebar-expanded-width) !important;
-    height: 100% !important;
+    max-width: none !important;
+    height: 0 !important;               /* closed = fully hidden */
+    min-height: 0 !important;
+    overflow: hidden !important;
     padding-bottom: 0 !important;
     z-index: 4 !important;
-/*    transition: width 0.33s cubic-bezier(0.07, 0.95, 0, 1) !important; */ /*This is deactivated because I'm using the adaptive tab colour extension, so there's a better way to do this*/
 }
-#sidebar-box:hover {
-    --tabs-lvl-opacity: 0.09 !important;
-    --tabs-indent: 16px !important;
-    width: var(--sidebar-expanded-width) !important;
+/* Open: nearly the full page height, leaving the close zone at the bottom */
+#sidebar-box[sb-hover-open],
+#sidebar-box[sb-pinned-open] {
+    height: calc(100% - var(--sidebar-close-zone-height)) !important;
 }
-#sidebar-box:hover ~ #tabbrowser-tabbox {
-    margin-right: calc((var(--sidebar-expanded-width) - var(--sidebar-collapsed-width)) * -1) !important;
-    /* expand immediately (no delay) when hovering */
-    transition: margin-right 0.33s cubic-bezier(0.07, 0.95, 0, 1) 0s !important;
+/* Get out of the way while the URL bar's suggestion list is open */
+#main-window:has(#urlbar[open]) #sidebar-box {
+    height: 0 !important;
 }
-#tabbrowser-tabbox {
-    z-index: inherit !important;
-    /* delayed collapse: waits --sidebar-collapse-delay before animating back */
-    transition: margin-right 0.33s cubic-bezier(0.07, 0.95, 0, 1) var(--sidebar-collapse-delay) !important;
+
+/* --- Bottom close strip (created by sidebar_toggle.uc.js) --- */
+/* Only shown for a hover-opened panel; a pinned panel ignores it */
+#sb-close-zone {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--sidebar-close-zone-height);
+    z-index: 5;
+    background: var(--sidebar-close-zone-color);
 }
+#sidebar-box[sb-hover-open]:not([sb-pinned-open]) ~ #sb-close-zone {
+    display: block;
+}
+
 /* Adaptive Tab Bar Colour + Sidebery transition merge */
 #navigator-toolbox,
 #TabsToolbar,
 #nav-bar,
 #PersonalToolbar,
-#sidebar-box,
 .tab-background,
 .urlbar-background,
 findbar {
@@ -63,22 +103,20 @@ findbar {
         border-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),                 /*Was 0.5s */
         width 0.33s cubic-bezier(0.07, 0.95, 0, 1) !important;
 }
-/* --- Expand-on-hover delay override (must come after the merge block) --- */
-/* Collapsed/default state: delay the width animation so it lingers before closing */
+
+/* --- Drop-down animation timing --- */
+/* Closing: waits --sidebar-collapse-delay, then slides up */
 #sidebar-box {
     transition:
         background-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),
         border-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),
-        width 0.33s cubic-bezier(0.07, 0.95, 0, 1) var(--sidebar-collapse-delay) !important;
+        height 0.33s cubic-bezier(0.07, 0.95, 0, 1) var(--sidebar-collapse-delay) !important;
 }
-/* Hover state: expand instantly, no delay */
-#sidebar-box:hover {
+/* Opening: instant */
+#sidebar-box[sb-hover-open],
+#sidebar-box[sb-pinned-open] {
     transition:
         background-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),
         border-color 0.33s cubic-bezier(0.07, 0.95, 0, 1),
-        width 0.33s cubic-bezier(0.07, 0.95, 0, 1) 0s !important;
-}
-/* Scrollbar position jitters on sidebery expansion animation, this is an attempt to fix it */
-#sidebar-box {
-    scrollbar-gutter: stable;
+        height 0.33s cubic-bezier(0.07, 0.95, 0, 1) 0s !important;
 }

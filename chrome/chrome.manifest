@@ -1,0 +1,3 @@
+# Gives chrome\JS\ a trusted internal address for yeovefirefox.cfg:
+#   chrome://yeovefirefox/content/<file>  ->  chrome\JS\<file>
+content yeovefirefox JS/
